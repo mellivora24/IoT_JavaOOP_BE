@@ -1,7 +1,7 @@
 # Bài tập lớn Java OOP - SmartHome
 Yêu cầu anh em tạo nhánh riêng theo tên mình và commit vào đó nhé!
 
-⚠️ Anh em chú ý repo này chỉ cho backend commit thôi, appplication layer thì sẽ ở 2 repo khác là <strong>IoT_JavaOOP_WEB</strong> và <strong>IoT_JavaOOP_Android</strong>
+⚠️ Anh em chú ý repo này chỉ cho backend commit thôi, appplication layer thì sẽ ở 2 repo khác là <strong><a href="https://github.com/mellivora24/IoT_JavaOOP_WEB">IoT_JavaOOP_WEB</a></strong> và <strong><a href="https://github.com/mellivora24/IoT_JavaOOP_Android">IoT_JavaOOP_Android</a></strong>
 
 * Cú pháp git tạo nhánh mới:
 ~~~ bash
