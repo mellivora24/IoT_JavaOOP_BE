@@ -1,5 +1,4 @@
 {
-  "code": 200,
   "data": [
     {
       "id": 1,
@@ -19,6 +18,5 @@
     }
   ],
   "status": "success",
-  "message": "Get device success",
-  "error": null
+  "message": "Get device success"
 }
