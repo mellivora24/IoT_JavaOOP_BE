@@ -5,11 +5,18 @@ import com.google.cloud.firestore.Firestore;
 import com.google.firebase.cloud.FirestoreClient;
 
 public class Device {
-
     private String id;
     private String port;
     private String deviceId;
     private String deviceType;
+    /* Thiet bi bat tat
+    deviceType: digitalDevice
+    deviceData: false -> tat, true -> bat
+    */
+    /* Thiet bi do
+    deviceType: analogDevice
+    deviceData: 0 -> 100
+     */
     private String deviceName;
     private String deviceData;
 

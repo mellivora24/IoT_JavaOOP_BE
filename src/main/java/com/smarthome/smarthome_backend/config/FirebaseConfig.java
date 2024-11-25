@@ -15,7 +15,6 @@ import java.io.InputStream;
 
 @Configuration
 public class FirebaseConfig {
-
     @PostConstruct
     public void initializeFirebase() throws IOException {
         InputStream serviceAccount = getClass().getClassLoader().getResourceAsStream("firebase-service-account.json");

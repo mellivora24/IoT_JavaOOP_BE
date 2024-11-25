@@ -1,7 +1,5 @@
 package com.smarthome.smarthome_backend.entity;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 public class User {
 
     private String username;  // Tên đăng nhập (ID của người dùng)
@@ -35,8 +33,7 @@ public class User {
 
     // Mã hóa mật khẩu trước khi set
     public void setPassword(String password) {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        this.password = encoder.encode(password); // Mã hóa mật khẩu
+        this.password = password; // Mã hóa mật khẩu
     }
 
     public String getEmail() {

@@ -1,11 +1,13 @@
 package com.smarthome.smarthome_backend.repository;
 
-import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
 import com.smarthome.smarthome_backend.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.google.firebase.auth.ActionCodeSettings;
 import org.springframework.stereotype.Repository;
+import com.smarthome.smarthome_backend.config.FirebaseConfig;
 
+import java.net.http.HttpClient;
 import java.util.concurrent.ExecutionException;
 
 @Repository
@@ -91,13 +93,9 @@ public class UserRepository {
 
     public void userLogin(User user) {
         try {
-            ApiFuture<QuerySnapshot> querySnapshot = firestore.collection(COLLECTION_NAME)
-                    .whereEqualTo("username", user.getUsername())
-                    .whereEqualTo("password", user.getPassword())
-                    .get();
-            if (querySnapshot.get().getDocuments().isEmpty()) {
-                throw new IllegalArgumentException("Invalid username or password.");
-            }
+            FirebaseConfig firebaseConfig = new FirebaseConfig();
+            HttpClient ActionCodeSettings = null;
+            firebaseConfig.firebaseAuth().generateSignInWithEmailLink(user.getEmail(), ActionCodeSettings);
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
